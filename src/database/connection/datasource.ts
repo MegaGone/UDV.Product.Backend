@@ -11,7 +11,7 @@ import {
   MYSQL_DATABASE,
 } from "src/configuration";
 
-import { RoleData, UserData } from "src/database/entities";
+import { RoleData, UserData, ProductData } from "src/database/entities";
 
 export class MySQLDataSource {
   private _datasource: DataSource;
@@ -27,7 +27,7 @@ export class MySQLDataSource {
       cache: MYSQL_CACHE || MYSQL_CACHE === "true" ? true : false,
       synchronize: MYSQL_SEED || MYSQL_SEED === "true" ? true : false,
       dropSchema: false,
-      entities: [UserData, RoleData],
+      entities: [UserData, RoleData, ProductData],
       extra: {
         validateConnection: false,
         trustServerCertificate: false,

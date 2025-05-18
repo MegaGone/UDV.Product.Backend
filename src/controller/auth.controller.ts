@@ -1,9 +1,9 @@
 import { Request, Response, NextFunction } from "express";
 import { BCryptExtension, JsonWebTokenExtension } from "src/extension";
 
-import { ROLE_ENUM_TYPE, STATUS_CODE } from "src/enums";
 import { CustomError } from "src/model";
 import { AuthService } from "src/service";
+import { ROLE_ENUM_TYPE, STATUS_CODE } from "src/enums";
 import { NODE_ENV, REFRESH_JWT_EXPIRATION, REFRESH_JWT_EXPIRATION_IN_MS } from "src/configuration";
 
 export const registerUser = async (req: Request, res: Response, next: NextFunction) => {

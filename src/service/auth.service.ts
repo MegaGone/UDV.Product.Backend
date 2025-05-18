@@ -8,9 +8,9 @@ export class AuthService {
     this._authRepository = new BaseRepository(this._datasource, UserData);
   }
 
-  public async insertRecord(neighborhood: Partial<UserData>): Promise<number> {
+  public async insertRecord(record: Partial<UserData>): Promise<number> {
     try {
-      const { identifiers } = await this._authRepository.insert(neighborhood);
+      const { identifiers } = await this._authRepository.insert(record);
       const { Id } = identifiers[0];
 
       return !Id || +Id <= 0 ? 0 : Id;
@@ -21,9 +21,9 @@ export class AuthService {
 
   public async findRecord(email: string): Promise<UserData | null> {
     try {
-      const neighborhood: UserData | null = await this._authRepository.findOne({ Email: email });
+      const record: UserData | null = await this._authRepository.findOne({ Email: email });
 
-      return !neighborhood ? null : neighborhood;
+      return !record ? null : record;
     } catch (error) {
       return null;
     }

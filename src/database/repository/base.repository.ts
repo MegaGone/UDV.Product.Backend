@@ -76,7 +76,7 @@ export class BaseRepository<T extends ObjectLiteral> {
   }
 
   public async delete(where: FindOptionsWhere<T>) {
-    const deleted = await this._repository.delete(where);
+    const deleted = await this._repository.softDelete(where);
     return deleted;
   }
 

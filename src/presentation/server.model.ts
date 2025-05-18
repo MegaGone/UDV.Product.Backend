@@ -9,9 +9,9 @@ import {
 } from "src/middleware";
 import { PORT } from "src/configuration";
 import { LoggerClient } from "src/logger";
-import { AuthService } from "src/service";
 import { MySQLDataSource } from "src/database";
 import { ServerOptions } from "src/presentation";
+import { AuthService, ProductService } from "src/service";
 import { SwaggerConfig, SwaggerOptions } from "src/documentation";
 
 export class Server {
@@ -59,6 +59,7 @@ export class Server {
 
   private async _registerLocal(): Promise<void> {
     this._app.locals.authService = await new AuthService(this._datasource.client);
+    this._app.locals.productService = await new ProductService(this._datasource.client);
   }
 
   public async start(): Promise<void> {

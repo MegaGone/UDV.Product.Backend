@@ -42,7 +42,7 @@ export class AuthRouter {
      *                   example: j0hn,2024!
      *     responses:
      *       200:
-     *         description: Neighborhood created
+     *         description: User created
      *         content:
      *           application/json:
      *             example:
@@ -87,7 +87,7 @@ export class AuthRouter {
      *                   example: j0hn,2024!
      *     responses:
      *       200:
-     *         description: Neighborhood logged
+     *         description: User logged
      *         content:
      *           application/json:
      *             example:
@@ -102,19 +102,19 @@ export class AuthRouter {
      *               statusCode: 400
      *               message: Email or password are wrong
      *       403:
-     *         description: Neighborhood is blocked
+     *         description: User is blocked
      *         content:
      *           application/json:
      *             example:
      *               statusCode: 403
-     *               message: Neighborhood is blocked
+     *               message: User is blocked
      *       404:
-     *         description: Neighborhood not found
+     *         description: User not found
      *         content:
      *           application/json:
      *             example:
      *               statusCode: 404
-     *               message: Neighborhood not found
+     *               message: User not found
      *       422:
      *        $ref: '#/components/responses/FieldException'
      *       500:

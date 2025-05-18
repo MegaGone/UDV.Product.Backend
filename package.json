@@ -1,7 +1,7 @@
 {
-  "name": "neighborhood.forum.backend",
+  "name": "udv.product.backend",
   "version": "1.0.0",
-  "description": "API to handle neighborhood forum system",
+  "description": "API to handle product system",
   "main": "index.js",
   "scripts": {
     "dev": "webpack --watch --config webpack/development.config.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MegaGone/Neighborhood.Forum.Backend.git"
+    "url": "git+https://github.com/MegaGone/UDV.Product.Backend.git"
   },
   "keywords": [
     "NodeJS",
@@ -23,9 +23,9 @@
   "author": "J. Martinez",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MegaGone/Neighborhood.Forum.Backend/issues"
+    "url": "https://github.com/MegaGone/UDV.Product.Backend/issues"
   },
-  "homepage": "https://github.com/MegaGone/Neighborhood.Forum.Backend#readme",
+  "homepage": "https://github.com/MegaGone/UDV.Product.Backend#readme",
   "dependencies": {
     "@datalust/winston-seq": "^2.0.0",
     "bcrypt": "^5.1.1",

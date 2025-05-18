@@ -11,9 +11,9 @@ export const SwaggerOptions = {
   definition: {
     openapi: "3.0.3",
     info: {
-      title: "Neighborhood.Forum.Backend",
+      title: "UDV.Product.Backend",
       version: version,
-      description: "Sistema Vecindario API",
+      description: "API para creación de productos",
     },
     servers: [],
     components: {
