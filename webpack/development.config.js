@@ -32,7 +32,7 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /Neighborhood\.Forum\.Backend\.postman_collection\.json$/,
+        test: /UDV\.Product\.Backend\.postman_collection\.json$/,
         use: "ignore-loader",
       },
     ],
